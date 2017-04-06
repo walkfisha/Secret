@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- textview的统一风格 24 -->
+    <style name="size_style_20" parent="style_all_wrap">
+        <item name="android:textSize">@dimen/size20</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- textview的统一风格 18 -->
+    <style name="size_style_18" parent="style_all_wrap">
+        <item name="android:textSize">@dimen/size18</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="size_style_18_while" parent="size_style_18">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <dimen name="size18">18sp</dimen>
+</resources>

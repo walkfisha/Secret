@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_boundary">16dp</dimen>
+    <dimen name="height_edittext">60dp</dimen>
+
+    <dimen name="size20">20sp</dimen>
+    <dimen name="margin_view">10dp</dimen>
+    <dimen name="clear_icon_small">26dp</dimen>
+    <dimen name="margin_small5">5dp</dimen>
+</resources>

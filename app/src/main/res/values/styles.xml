@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- actctity 统一背景风格 -->
+    <style name="style_activity_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/main_bg_color</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="style_layout_margin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_boundary</item>
+        <item name="android:layout_marginRight">@dimen/margin_boundary</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- width heigth -->
+    <style name="style_all_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_button" parent="size_style_18_while">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_button</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@color/main_color</item>
+        <item name="android:layout_marginLeft">@dimen/margin_boundary</item>
+        <item name="android:layout_marginRight">@dimen/margin_boundary</item>
+        <item name="android:layout_marginBottom">@dimen/margin_boundary</item>
+    </style>
+
+
+    <dimen name="height_button">50dp</dimen>
+</resources>

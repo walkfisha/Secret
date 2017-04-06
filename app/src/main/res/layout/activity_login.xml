@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_activity_bg"
+    android:paddingTop="16dp">
+
+    <LinearLayout
+        style="@style/style_layout_margin"
+        android:layout_height="@dimen/height_edittext"
+        android:background="@drawable/user_login_user"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/userphoneEdit"
+            style="@style/size_style_20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_user_loginlogo"
+            android:layout_marginLeft="@dimen/margin_view"
+            android:background="@null"
+            android:hint="@string/setting_user_login_name"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/bt_user_clear"
+            android:layout_width="@dimen/clear_icon_small"
+            android:layout_height="@dimen/clear_icon_small"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_small5"
+            android:layout_marginRight="@dimen/margin_small5"
+            android:padding="@dimen/margin_small5"
+            android:background="@drawable/ic_clear"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style_layout_margin"
+        android:layout_height="@dimen/height_edittext"
+        android:background="@drawable/user_login_psw" >
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            style="@style/size_style_20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_view"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_user_login_pswlogo"
+            android:hint="@string/setting_user_your_pwd"
+            android:password="true"
+            android:singleLine="true"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/bt_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_small5"
+            android:layout_marginRight="@dimen/margin_small5"
+            android:padding="@dimen/margin_small5"
+            android:text="@string/get_code"
+            android:background="@null"
+            />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onForgetPwdButtonClick"
+        android:visibility="invisible" />
+    <Button
+        style="@style/style_button"
+        android:layout_marginTop="@dimen/margin_boundary"
+        android:onClick="onForgetPwdButtonClick"
+        android:text="@string/setting_user_forgot_pwd"
+        android:visibility="gone"
+        />
+    <Button
+        android:id="@+id/logininBtn"
+        style="@style/style_button"
+        android:text="@string/setting_user_login" />
+
+</LinearLayout>
