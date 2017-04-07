@@ -13,7 +13,7 @@ public class Config {
     public static final String APP_ID = "com.flyingfish.secret";
     public static final String CHARSET = "utf-8" ;
     //public static final String SERVER_URL = "http://demo.eoeschool.com/api/v1/nimings/io" ;
-    public static final String SERVER_URL = "http://192.168.0.121:8080/TestServer/api.jsp" ;
+    public static final String SERVER_URL = "http://192.168.0.112:8080/TestServer/api.jsp" ;
     public static final String ACTION_GET_CODE = "send_pass";
     public static final String KEY_ACTION = "action";
     public static final String KEY_PHONE_NUM = "phone";
@@ -26,6 +26,12 @@ public class Config {
     public static final String KEY_CODE = "code";
     public static final String ACTION_UPLOAD_CANTACTS = "upload_contacts";
     public static final String KEY_CONTACTS = "contacts";
+    public static final String ACTION_TIMELINE = "timeline";
+    public static final String KEY_PAGE = "page";
+    public static final String KEY_PERPAGE = "perpage";
+    public static final String KEY_TIMELINE = "timeline";
+    public static final String KEY_MSG_ID = "msgId";
+    public static final String KEY_MSG = "msg";
 
     //获取到缓存的token
     public static String getCachedToken(Context context){

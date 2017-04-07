@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.flyingfish.secret">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,9 +22,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".TimeLineActivity" />
         <activity android:name=".ContactMessageActivity" />
-        <activity android:name=".PubMessageActivity"></activity>
+        <activity android:name=".PubMessageActivity" />
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 </manifest>

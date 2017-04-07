@@ -63,9 +63,11 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
+                final ProgressDialog pd = ProgressDialog.show(LoginActivity.this,getString(R.string.conncting),getString(R.string.connect_server));
                 new Login(PhoneMD5.md5(etPhone.getText().toString(),"jiandan"), etCode.getText().toString(), new Login.SuccessCallback() {
                     @Override
                     public void onSuccess(String token) {
+                        pd.dismiss();
                         Config.cacheToken(LoginActivity.this,token);
                         Config.cachePhoneNum(LoginActivity.this,etPhone.getText().toString());
 
@@ -78,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                 }, new Login.FailCallback() {
                     @Override
                     public void onFall() {
+                        pd.dismiss();
                         Toast.makeText(LoginActivity.this,R.string.fail_to_login,Toast.LENGTH_LONG).show();
                     }
                 });
