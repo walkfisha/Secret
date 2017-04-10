@@ -35,6 +35,7 @@ public class MessageListAdapter extends BaseAdapter {
     public long getItemId(int i) {
         return i;
     }
+
     class ViewHolder{
         TextView msg_content;
     }

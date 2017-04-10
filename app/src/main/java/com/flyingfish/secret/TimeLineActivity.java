@@ -18,7 +18,7 @@ import org.json.JSONArray;
 
 import java.util.List;
 
-public class TimeLineActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class TimeLineActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private String phone_num,phone_md5,token;
     private MessageListAdapter adapter;
@@ -31,6 +31,7 @@ public class TimeLineActivity extends AppCompatActivity implements AdapterView.O
         adapter = new MessageListAdapter(this);
         listView = (ListView) findViewById(R.id.contact_list);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
         phone_num = getIntent().getStringExtra(Config.KEY_PHONE_NUM);
         token = getIntent().getStringExtra(Config.KEY_TOKEN);
         phone_md5 = PhoneMD5.md5(phone_num,"jiandan");
@@ -68,9 +69,14 @@ public class TimeLineActivity extends AppCompatActivity implements AdapterView.O
             }
         }, new Timeline.FailCallback() {
             @Override
-            public void onFail() {
+            public void onFail(int errorcode) {
                 pd.dismiss();
-                Toast.makeText(TimeLineActivity.this,R.string.fail_to_load_timeline,Toast.LENGTH_LONG).show();
+                if (errorcode == Config.RESULT_STATUS_INVALID_TOKEN){
+                    startActivity(new Intent(TimeLineActivity.this,LoginActivity.class));
+                    finish();
+                }else {
+                    Toast.makeText(TimeLineActivity.this, R.string.fail_to_load_timeline, Toast.LENGTH_LONG).show();
+                }
             }
         });
         System.out.println(">>>>>>>>LoadMessage<<<<<<<");
@@ -83,6 +89,8 @@ public class TimeLineActivity extends AppCompatActivity implements AdapterView.O
         intent.putExtra(Config.KEY_MSG,msg.getMsg());
         intent.putExtra(Config.KEY_MSG_ID,msg.getMsgId());
         intent.putExtra(Config.KEY_PHONE_MD5,phone_md5);
+        intent.putExtra(Config.KEY_TOKEN,token);
         startActivity(intent);
+        finish();
     }
 }
